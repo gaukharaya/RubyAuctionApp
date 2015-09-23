@@ -3,7 +3,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">New Listing</h4>
+        <h4 class="modal-title">New Challenge</h4>
       </div>
       <%= form_for :listing, url: '/listings', html: { class: 'form-horizontal' } do %>
         <div class="modal-body">
@@ -16,7 +16,7 @@
           <div class="form-group">
             <label for="inputListing" class="col-sm-2 control-label">Listing</label>
             <div class="col-sm-10">
-              <textarea class="form-control" name="listing[body]" id="inputListing" placeholder="What would you like to know" required></textarea>
+              <textarea class="form-control" name="listing[body]" id="inputListing" placeholder="What dare would you like to do?" required></textarea>
             </div>
           </div>
         </div>

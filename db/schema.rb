@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 20150301042643) do
     t.integer  "listing_id"
     t.string   "email"
     t.text     "body"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "listings", force: :cascade do |t|

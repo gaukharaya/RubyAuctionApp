@@ -1,29 +1,29 @@
 <div class="well">
-  <h4>The Universe is the totality of everything that exists, has existed, or ever will exist.</h4>
-  <p>This Q&amp;A site is dedicated to listings about the history of the Universe</p>
+  <h4>Do something un-freaking-believable and watch the money roll</h4>
+  <p>This auction site is dedicated to daring yourself while others pay you for that!</p>
 </div>
 
 <div class="container">
   <div class="boxes">
-    <% @listings.each do |q| %>
-      <div class="media" data-target="<%= listing_path(q) %>">
+    <% @listings.each do |l| %>
+      <div class="media" data-target="<%= listing_path(l) %>">
         <div class="media-left">
           <a href="#">
-            <img class="media-object" src="<%= q.gravatar %>">
+            <img class="media-object" src="<%= l.gravatar %>">
           </a>
         </div>
         <div class="media-body">
-          <h4 class="media-heading"><%= q.email %> asked:</h4>
-          <div class="time hidden-xs"><%= time_ago_in_words q.created_at %> ago</div>
-          <div><%= truncate q.body, length: 300 %></div>
-          <div class="hidden-xs"><a href="<%= listing_path(q) %>" class="btn btn-success btn-xs">View Bids</a></div>
+          <h4 class="media-heading"><%= l.email %> dares to:</h4>
+          <div class="time hidden-xs"><%= time_ago_in_words l.created_at %> ago</div>
+          <div><%= truncate l.body, length: 300 %></div>
+          <div class="hidden-xs"><a href="<%= listing_path(l) %>" class="btn btn-success btn-xs">View Bids</a></div>
         </div>
       </div>
     <% end %>
   </div>
 
   <% if @listings.empty? %>
-    <div class="alert alert-info">Nothing here yet, be the first to ask?</div>
+    <div class="alert alert-info">Nothing here yet, be the first to do a bold challenge?</div>
   <% end %>
 </div>
 
